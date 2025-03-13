@@ -31,7 +31,7 @@ void inputData(){
         cin >> arr[i];
     }
 }
-void bubblesort()
+void bubbleSort()
 {
     int pass = 1; // step 1
     do
@@ -53,7 +53,23 @@ void bubblesort()
        } while (pass <= n-1); //step 5
        
 }
+void displayData()
+{
+    cout << endl;
+    cout << "==================" << endl;
+    cout << "Data Setelah Diurutkan" << endl;
+    cout << "==================" << endl;
+    cout << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Data ke-" << i + 1 << " = " << arr[i] << endl;
+    }
+}
 int main()
 {
     inputData();
+    bubbleSort();
+    displayData();
+    return 0;
 }
